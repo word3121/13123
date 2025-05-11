@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index.php");
     exit;
 }
-// This is made by Magiczny_Jasiek, and only he can sell it. If you bought it from other vacban.wtf listing that was not this one: https://vacban.wtf/vacshop/78615/ then be careful using it. It is not official.
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imie = sanitize_input($_POST['imie']);
     $nazwisko = sanitize_input($_POST['nazwisko']);
@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     file_put_contents("$folder_name/more.html", $more_template);
     file_put_contents("$folder_name/services.html", $services_template);
     file_put_contents("$folder_name/documents.html", $documents_template);
+
     header("Location: $folder_name");
     exit;
 }
@@ -145,9 +146,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </select><br><br>
             <input type="submit" value="Generuj">
         </form>
-		<script>
-		// This is made by Magiczny_Jasiek, and only he can sell it. If you bought it from other vacban.wtf listing that was not this one: https://vacban.wtf/vacshop/78615/ then be careful using it. It is not official.
-		</script>
    </div>
   <div class="navbar">
         <a href="/info.php" class="nav-link"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
