@@ -64,17 +64,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 });
 </script>
   </head>
-<body>
-    <div class="loader"></div>
-  <div class="login-container">
-        <h1>demObywatel</h1>
-        <form action="login.php" method="POST">
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="password" id="password" name="password" placeholder="Auth Key" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</body>
+
 <!-- demObywatel 2024 -->
 <!-- Paulina Bernaszuk -->
 <!-- Strona jest przeznaczona jedynie do generowania demonstracyjnych stron aplikacji mObywatel. -->
